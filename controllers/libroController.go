@@ -7,14 +7,6 @@ import (
 	"net/http"
 )
 
-func GetLibros(w http.ResponseWriter, r *http.Request) {
-	// Implementación pendiente para obtener todos los libros
-}
-
-func GetLibro(w http.ResponseWriter, r *http.Request) {
-	// Implementación pendiente para obtener un libro por ID
-}
-
 func CreateLibro(w http.ResponseWriter, r *http.Request) {
 	var libro services.Libro
 	if err := json.NewDecoder(r.Body).Decode(&libro); err != nil {
@@ -56,5 +48,3 @@ func ListarLibrosPopulares(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 }
-
-// Agrega más manejadores (Update, Delete) según sea necesario

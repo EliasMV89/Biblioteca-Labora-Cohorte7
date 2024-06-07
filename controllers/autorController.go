@@ -7,14 +7,6 @@ import (
 	"net/http"
 )
 
-func GetAutores(w http.ResponseWriter, r *http.Request) {
-	// Implementación pendiente para obtener todos los autores
-}
-
-func GetAutor(w http.ResponseWriter, r *http.Request) {
-	// Implementación pendiente para obtener un autor por ID
-}
-
 func CreateAutor(w http.ResponseWriter, r *http.Request) {
 	var autor services.Autor
 	if err := json.NewDecoder(r.Body).Decode(&autor); err != nil {
@@ -31,5 +23,3 @@ func CreateAutor(w http.ResponseWriter, r *http.Request) {
 	w.WriteHeader(http.StatusCreated)
 	json.NewEncoder(w).Encode(autor)
 }
-
-// Agrega más manejadores (Update, Delete) según sea necesario
