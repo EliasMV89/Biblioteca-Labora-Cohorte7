@@ -1,7 +1,7 @@
 package routers
 
 import (
-	"Biblioteca/controllers" // Ajusta el import según tu estructura
+	"Biblioteca/controllers"
 	"github.com/gorilla/mux"
 )
 
